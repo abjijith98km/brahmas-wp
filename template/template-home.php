@@ -259,92 +259,75 @@ if ($trustedBannerTitle) :
   </section>
 <?php endif; ?>
 
-<section class="blogs_and_events">
-  <div class="container">
+
+<?php
+$featured_blogs_events = get_field('homepage_blogs_and_events_list');
+if ($featured_blogs_events) : ?>
+
+  <section class="blogs_and_events">
+    <div class="container">
+      <div class="custom_title_wrapper">
+        <h2><?php the_field('hommepage_blogs_and_events_title'); ?></h2>
+        <p><?php the_field('hommepage_blogs_and_events_subtitle'); ?></p>
+      </div>
+      <div class="blogs_and_events_grid">
+        <?php foreach ($featured_blogs_events as $post) :
+          setup_postdata($post); ?>
+
+          <a href="<?php the_permalink(); ?>" class=" blog">
+            <div class="blog_img">
+              <img src="<?php $bimg = get_field('blog_thumbnail_image', $post);
+                        echo esc_url($bimg['url']); ?>" alt="blog image">
+            </div>
+            <div class="blog_content">
+              <span class="posted_on"><?php the_field('blog_date', $post); ?></span>
+              <div class="main_title">
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt(); ?>
+              </div>
+            </div>
+          </a>
+        <?php endforeach; ?>
+
+        <?php
+        wp_reset_postdata(); ?>
+      </div>
+      <?php
+      $blogslink = get_field('hommepage_blogs_and_events_link');
+      if ($blogslink) :
+        $link_url = $blogslink['url'];
+        $link_title = $blogslink['title'];
+        $link_target = $blogslink['target'] ? $blogslink['target'] : '_self';
+      ?>
+        <a class="explore_more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+          </svg></a>
+      <?php endif; ?>
+
+    </div>
+  </section>
+
+<?php endif; ?>
+
+<?php if (have_rows('partner_images_slider')) : ?>
+  <section class="partners_and_clients">
     <div class="custom_title_wrapper">
-      <h2>Blog & events</h2>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum asperiores fugit nisi recusandae excepturi animi atque est incidunt impedit sequi?.</p>
+      <h2><?php the_field('titleClients_and_partners_title');?></h2>
+      <p><?php the_field('subtitletitleClients_and_partners_subtitle');?></p>
     </div>
-    <div class="blogs_and_events_grid">
-      <a href="/blog-details.html" class="blog_one blog">
-        <div class="blog_img">
-          <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/Event-single-img-1.jpg" alt="blog image">
+    <div class="partners_and_clients_innerwrap" id="partners_slider">
+      <?php while (have_rows('partner_images_slider')) : the_row();
+        $Partnerimage = get_sub_field('slide_image');
+      ?>
+        <div class="partner_logo">
+          <img src="<?php echo esc_url($Partnerimage['url']); ?>" alt="partner logo">
         </div>
-        <div class="blog_content">
-          <span class="posted_on">Aug 11, 2022</span>
-          <div class="main_title">
-            <h3>Build your money machine, take control</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nulla ad tempora?</p>
-          </div>
-        </div>
-      </a>
-      <a href="/blog-details.html" class="blog_two blog">
-        <div class="blog_img">
-          <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="blog image">
-        </div>
-        <div class="blog_content">
-          <span class="posted_on">Jun 31, 2022</span>
-          <div class="main_title">
-            <h3>Learn strategies to thrive in any economy</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nulla ad tempora?</p>
-          </div>
-        </div>
-      </a>
-      <a href="/blog-details.html" class="blog_three blog">
-        <div class="blog_img">
-          <img src="https://images.pexels.com/photos/2265488/pexels-photo-2265488.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="blog image">
-        </div>
-        <div class="blog_content">
-          <span class="posted_on">Feb 23, 2022</span>
-          <div class="main_title">
-            <h3>Unleash your power within</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nulla ad tempora?</p>
-          </div>
-        </div>
-      </a>
-      <a href="/blog-details.html" class="blog_four blog">
-        <div class="blog_img">
-          <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="blog image">
-        </div>
-        <div class="blog_content">
-          <span class="posted_on">Oct 2, 2022</span>
-          <div class="main_title">
-            <h3>Date with destiny leadership</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod nulla ad tempora?</p>
-          </div>
-        </div>
-      </a>
+      <?php endwhile; ?>
+
+
     </div>
-    <a href="/blogs-landing.html" class="explore_more">More blogs <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
-      </svg>
-    </a>
-  </div>
-</section>
-<section class="partners_and_clients">
-  <div class="custom_title_wrapper">
-    <h2>Our partners & clients</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-  </div>
-  <div class="partners_and_clients_innerwrap" id="partners_slider">
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/12/image10-300x147.png" alt="digi online">
-    </div>
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/12/image9-e1644394937484-300x136.jpeg" alt="digi online">
-    </div>
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/05/PixelFlame_logo.png" alt="digi online">
-    </div>
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/12/image11.png" alt="digi online">
-    </div>
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/12/image7.jpg" alt="digi online">
-    </div>
-    <div class="partner_logo">
-      <img src="http://brahmas.org/wp-content/uploads/2021/12/image10-300x147.png" alt="digi online">
-    </div>
-  </div>
-</section>
+  </section>
+
+<?php endif; ?>
+
 <?php get_footer(); ?>
