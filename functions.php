@@ -95,6 +95,7 @@ add_action( 'wp_enqueue_scripts', 'theme_scripts' );
     require get_template_directory() . '/includes/cpt/course.php';
     require get_template_directory() . '/includes/cpt/teacher.php';
     require get_template_directory() . '/includes/cpt/blog.php';
+    require get_template_directory() . '/includes/cpt/jobs.php';
     require get_template_directory() . '/includes/image-sizes.php';
 // custom functions end
 

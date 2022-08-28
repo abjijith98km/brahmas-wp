@@ -1,10 +1,12 @@
 <?php get_header(); ?>
+
 <section class="dynamic_banner">
   <div class="banner_bg_image">
-    <img src="https://images.pexels.com/photos/6238037/pexels-photo-6238037.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="@@title bg image">
+    <img src="<?php $bimg = get_field('banner_image');
+              echo esc_url($bimg['url']); ?>" alt="Course banner image">
   </div>
   <div class="main_title">
-    <h1>Management Information Systems</h1><!-- <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quod incidunt optio deserunt, at odio tempora laborum consequatur aperiam cumque?</h5> -->
+    <h1><?php the_title(); ?></h1><!-- <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quod incidunt optio deserunt, at odio tempora laborum consequatur aperiam cumque?</h5> -->
   </div>
 </section>
 <section class="course_details_content_block">
@@ -12,254 +14,132 @@
     <div class="course_details_content_block_wrapper row">
       <div class="col-12 col-lg-9">
         <div class="course_overview_tab">
-          <div class="coach_tab">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/06/Instructor-img-6-252x300.jpg" alt="coach name">
-            <div class="body_copy">
-              <h5>Instructor</h5>
-              <h6>Clara Olsen</h6>
-            </div>
-          </div>
+          <?php
+          $courseCoach = get_field('coach');
+          if ($courseCoach) : ?>
+            <?php foreach ($courseCoach as $post) :
+
+              // Setup this post for WP functions (variable must be named $post).
+              setup_postdata($post); ?>
+
+              <div class="coach_tab">
+                <img src=" <?php $coachimg =  get_field('coach_image', $post);
+                            echo esc_url($coachimg['url']); ?>" alt="<?php the_title(); ?>">
+                <div class="body_copy">
+                  <h5>Instructor</h5>
+                  <h6><?php the_title(); ?></h6>
+                </div>
+              </div>
+            <?php endforeach; ?>
+            <?php
+            // Reset the global post object so that the rest of the page works correctly.
+            wp_reset_postdata(); ?>
+
+
+          <?php endif; ?>
+
           <div class="reviews_tab">
             <div class="body_copy">
               <h5>Review</h5>
               <ul class="rating">
-                <span>4.3</span>
-                <li class="rated">
+                <span><?php the_field('reviews'); ?></span>
+                <?php
+                $review = get_field('reviews');
+                for ($x = 1; $x <= 5; $x++) {
+                  if ($x <= $review) {
+                    echo '<li class="rated">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                   </svg>
-                </li>
-                <li class="rated">
+                </li>';
+                  } else {
+                    echo '   <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
                     <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                   </svg>
-                </li>
-                <li class="rated">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                  </svg>
-                </li>
-                <li class="rated">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                  </svg>
-                </li>
-                <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                  </svg>
-                </li>
+                </li>';
+                  }
+                }
+
+                ?>
+
               </ul>
             </div>
           </div>
-          <a href="#" class="apply_now_button">Register Now!</a>
+          <a href="/contact-us" class="apply_now_button">Register Now!</a>
         </div>
         <div class="course_features max-570">
           <h3>Course features</h3>
-          <div class="feature">Duration: 4 Months</div>
-          <div class="feature">Sessions: 80</div>
-          <div class="feature">Max Students: 60</div>
-          <div class="feature">Max retakes: 2</div>
+          <div class="feature">Duration: <?php the_field('course_duration'); ?></div>
+          <div class="feature">Sessions: <?php the_field('number_of_sessions'); ?></div>
+          <div class="feature">Timings: <?php the_field('session_timings'); ?></div>
+          <div class="feature">Maximum students: <?php the_field('max_students'); ?></div>
         </div>
         <div class="course_detail_body">
           <div class="course_feature_img">
-            <img src="https://images.pexels.com/photos/5212703/pexels-photo-5212703.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="course name">
+            <img src="<?php $cfimg = get_field('course_thumbnail_image');
+                      echo esc_url($cfimg['url']); ?>" alt="course featured image">
           </div>
           <div class="details_content">
-            <!-- <h1>MIS – Management Information Systems</h1> -->
-            <!-- <h2>MIS – Management Information Systems</h2> -->
-            <!-- <h3>MIS – Management Information Systems</h3> -->
-            <h4>MIS – Management Information Systems</h4><!-- <h5>MIS – Management Information Systems</h5> -->
-            <!-- <h6>MIS – Management Information Systems</h6> -->
-            <p>Management Information Systems (MIS) is one of the most popular and effective information systems that are used by almost all the organizations to manage their operations. It involves the study of information systems within organizations. The field of MIS has grown and evolved significantly over the past several decades, and has become a critical part of many organizations. Its role has expanded to include systems within the human resources, manufacturing, finance, marketing, and service industries. In today’s world, an organization cannot function without a modern, well-managed information system.</p>
-            <p>This course is designed to provide students with a general understanding of the role of management information systems in the management process. It will help you to perform the application of systems with sessions on practical situations. The course will also help you to understand the various methodologies used in the management of information systems and enable you to identify the most appropriate methodology for a given situation. You will also develop an understanding of the relationship between theory and practice in the management of information systems</p>
-            <p>If you have an interest in information technology and want to learn how data based technological tools can influence the processes of strategic planning and decision making in an enterprise, you have chosen the right course.</p>
-            <h4>Why is MIS important:</h4>
-            <p>MIS is nowadays an important aspect of any business activity, whether online or offline. Its uses encompass from a big organization to small stores, schools and colleges. Even the various layers of governance viz. Central, State and Local Bodies use data based information system to percolate the benefits of welfare schemes to the beneficiaries. Suffice it to say that everyone uses some kind of information system that is used to store and manage database. Data is valuable more than ever and MIS is in high demand as there is always a need for organizations and businesses to find someone who manage their database and make effective decisions to use data in a way that will generate results.</p>
-            <p>Management Information Systems is a core component of business management, and IT professionals who work in this field are tasked with different roles. It is important to understand the specific responsibilities of an MIS professional, as well as the factors that make a candidate uniquely qualified for such a role.</p>
-            <h4>Objective of MIS:</h4>
-            <p>The objective of MIS is to create value through effective use of technology. MIS uses information systems to assist businesses in managing their operations efficiently. The main goal is to support an organization’s management processes as opposed to production processes. The areas where MIS can make key contributions are: accounting & finance; human resources; marketing & achievement of budgeted goals.</p>
-            <h4>Role of MIS in Planning and Decision Making:</h4>
-            <p>Management information systems deal with the use and design of software, technology and applications for the purpose of supporting strategic planning, decision making, and the implementation of tactical objectives.</p>
-            <p>The MIS provides an insight about the types of customers that an organization serves and the needs of those customers. It also helps in the preparation of a road map to tap new customer base to increase sales volumes so as to achieve the budgeted goals.</p>
-            <h4>What you will learn as an MIS student:</h4>
-            <p>As an MIS student you will learn how to solve problems and find ways to make use of data in an organization or business depending on their requirements. You will also learn how organizations harness data not only to arrive at business goals but also to achieve those goals. The course will take students through different processes and functions involved in MIS, equipping them to become a successful MIS professional at the end of the course</p>
-            <p>While learning MIS, you will learn things like problem solving, Database Management and much more. Logical driven ideology is at the core of MIS. As a MIS student you will learn to use data for specific purposes and will also learn about computer Database, Networking, Computer Security and Managing Database and Information systems.</p>
+            <?php the_field('course_description'); ?>
           </div>
         </div>
-        <div class="article_comments_module">
-          <ol class="commentlist">
-            <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="comment-2">
-              <div id="div-comment-2" class="comment-body">
-                <div class="comment-author vcard">
-                  <img alt="" src="http://2.gravatar.com/avatar/b9943179b804120e12127e1675a5c809?s=32&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/b9943179b804120e12127e1675a5c809?s=64&amp;d=mm&amp;r=g 2x" class="avatar avatar-32 photo" height="32" width="32" loading="lazy">
-                  <cite class="fn">
-                    <a href="http://localhost/brahmas" rel="external nofollow ugc" class="url">admin</a>
-                  </cite>
-                  <span class="says">says:</span>
-                </div>
-                <div class="comment-meta commentmetadata">
-                  <a href="http://localhost/brahmas/courses/full-stack-developer/#comment-2">August 24, 2022 at 11:04 am</a>
-                </div>
-                <p>hi there</p>
-                <div class="reply">
-                  <a rel="nofollow" class="comment-reply-link" href="http://localhost/brahmas/courses/full-stack-developer/?replytocom=2#respond" data-commentid="2" data-postid="161" data-belowelement="div-comment-2" data-respondelement="respond" data-replyto="Reply to admin" aria-label="Reply to admin">Reply</a>
-                </div>
-              </div>
-            </li><!-- #comment-## -->
-          </ol>
-          <div id="respond" class="comment-respond">
-            <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small>
-                <a rel="nofollow" id="cancel-comment-reply-link" href="/brahmas/courses/full-stack-developer/#respond" style="display:none;">Cancel reply</a>
-              </small>
-            </h3>
-            <form action="http://localhost/brahmas/wp-comments-post.php" method="post" id="commentform" class="comment-form">
-              <p class="comment-notes">
-                <span id="email-notes">Your email address will not be published.</span>
-                <span class="required-field-message" aria-hidden="true">Required fields are marked <span class="required" aria-hidden="true">*</span>
-                </span>
-              </p>
-              <p class="comment-form-author">
-                <label for="author">Name <span class="required" aria-hidden="true">*</span>
-                </label>
-                <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required">
-              </p>
-              <p class="comment-form-email">
-                <label for="email">Email <span class="required" aria-hidden="true">*</span>
-                </label>
-                <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required">
-              </p>
-              <p class="comment-form-cookies-consent">
-                <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes">
-                <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label>
-              </p>
-              <p class="comment-form-comment">
-                <label for="comment">Comment <span class="required" aria-hidden="true">*</span>
-                </label>
-                <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>
-              </p>
-              <p class="form-submit">
-                <input name="submit" type="submit" id="submit" class="submit" value="Post Comment">
-                <input type="hidden" name="comment_post_ID" value="161" id="comment_post_ID">
-                <input type="hidden" name="comment_parent" id="comment_parent" value="0">
-              </p>
-            </form>
-          </div><!-- <h4>Comments</h4> -->
-          <!-- <div class="comments_inner">
+        <div class="article_comments_module pb-2 mb-5">
+          <?php comments_template(); ?>
 
-            <h6>Leave a comment</h6>
-
-            <p>We will not disclose  any of your personal information to anyone.This is for the course feedbacks</p>
-
-            <form action="#">
-
-              <fieldset>
-
-                <label for="i=username">Name:</label>
-
-                <input type="text" name="i=username" id="i=username" required/>
-
-              </fieldset>
-
-              <fieldset>
-
-                <label for="emailid">Email:</label>
-
-                <input type="email" name="emailid" id="emailid" required/>
-
-              </fieldset>
-
-              <fieldset>
-
-                <label for="message">Comment:</label>
-
-                <textarea
-
-                  name="message"
-
-                  id="message"
-
-                  required
-
-                  cols="30"
-
-                  rows="10"
-
-                ></textarea>
-
-              </fieldset>
-
-              <button class="submit" type="submit">Submit</button>
-
-            </form>
-
-
-
-            <ul class="comments_listing">
-
-              <li>
-
-                <div class="user_avatar">
-
-                  <img src="https://images.pexels.com/photos/4939699/pexels-photo-4939699.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="avatar">
-
-                </div>
-
-                <div class="comment_body">
-
-                  <span>Aug 22, 2022</span>
-
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam sint perferendis quidem pariatur vel accusamus modi dignissimos, ad voluptatibus.</p>
-
-                </div>
-
-              </li>
-
-            </ul>
-
-          </div> -->
         </div>
       </div>
       <div class="col-12 col-lg-3">
         <div class="course_features">
           <h3>Course features</h3>
-          <div class="feature">Duration: 4 Months</div>
-          <div class="feature">Sessions: 80</div>
-          <div class="feature">Max Students: 60</div>
-          <div class="feature">Max retakes: 2</div>
+          <div class="feature">Duration: <?php the_field('course_duration'); ?></div>
+          <div class="feature">Sessions: <?php the_field('number_of_sessions'); ?></div>
+          <div class="feature">Timings: <?php the_field('session_timings'); ?></div>
+          <div class="feature">Maximum students: <?php the_field('max_students'); ?></div>
         </div>
-        <div class="you_may_like_suggestion_list">
-          <h5>Similar courses</h5>
-          <ul>
-            <li>
-              <a href="/course-details.html">
-                <img src="https://images.pexels.com/photos/13172083/pexels-photo-13172083.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="course image">
-                <div class="course_detail">
-                  <h6>Personality development</h6>
-                  <span>5 months</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/course-details.html">
-                <img src="https://images.pexels.com/photos/6147134/pexels-photo-6147134.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="course image">
-                <div class="course_detail">
-                  <h6>Acting</h6>
-                  <span>4 months</span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/course-details.html">
-                <img src="https://images.pexels.com/photos/2266105/pexels-photo-2266105.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500&lazy=load" alt="course image">
-                <div class="course_detail">
-                  <h6>career guidance</h6>
-                  <span>4 months</span>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
+
+
+        <?php
+        $similarCourses = get_field('similar_courses');
+        if ($similarCourses) : ?>
+          <div class="you_may_like_suggestion_list">
+            <h5>Similar courses</h5>
+            <ul>
+              <?php foreach ($similarCourses as $post) :
+
+                // Setup this post for WP functions (variable must be named $post).
+                setup_postdata($post);
+                $sidrev = get_field('reviews', $post);
+                $siddur = get_field('course_duration', $post);
+              ?>
+                <li>
+                  <a href="<?php the_permalink(); ?>">
+                    <img src="<?php $simCor = get_field('course_thumbnail_image');
+                              echo esc_url($simCor['url']); ?>" alt="course image">
+                    <div class="course_detail">
+                      <h6><?php the_title(); ?></h6>
+                      <span class="d-flex align-items-center justify-content-between"><?php echo $siddur; ?>
+                        <span class="d-flex align-items-center">
+                          <?php echo $sidrev; ?> <svg class="mx-2" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="#ea4a34" class="bi bi-star-fill" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              <?php endforeach; ?>
+              <?php
+              // Reset the global post object so that the rest of the page works correctly.
+              wp_reset_postdata(); ?>
+
+
+            </ul>
+          </div>
+
+        <?php endif; ?>
+
+
         <div class="share_to_platform">
           <h5>Share to:</h5>
           <ul>
