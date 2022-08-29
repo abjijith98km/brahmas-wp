@@ -77,7 +77,7 @@
           <h6>
             <span>Location:</span><?php the_field('location'); ?>
           </h6>
-          <a href="/apply-for.html" class="apply_btn">Apply Now</a>
+          <a href="/brahmas/apply" class="apply_btn">Apply Now</a>
         </div>
         <div class="row">
           <div class="col-12 col-lg-6">
