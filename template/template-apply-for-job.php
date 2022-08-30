@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Apply page */
+/* Template Name: Apply for job page */
 /* Template Post Type: page */
 ?>
 <?php get_header(); ?>
@@ -43,7 +43,7 @@
             </div>
           </div>
           <div class="col-lg-6 col-12">
-          <?php echo do_shortcode('[contact-form-7 id="403" title="upload cv"]'); ?>
+          <?php echo do_shortcode('[contact-form-7 id="420" title="Appply for job"]'); ?>
           
           </div>
         </div>
