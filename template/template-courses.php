@@ -10,11 +10,11 @@
 
 <section class="dynamic_banner">
   <div class="banner_bg_image">
-    <img src="https://images.pexels.com/photos/459403/pexels-photo-459403.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="@@title bg image">
+    <img src="<?php $bImg = get_field('banner_image'); echo esc_url($bImg['url']);?>" alt="@@title bg image">
   </div>
   <div class="main_title">
-    <h1>All Courses</h1>
-    <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo quod incidunt optio deserunt, at odio tempora laborum consequatur aperiam cumque?</h5>
+  <h1><?php the_field('banner_title');?></h1>
+    <h5><?php the_field('banner_subtitle');?></h5>
   </div>
 </section>
 <section class="all_courses_listing_section">

@@ -66,7 +66,16 @@
               </ul>
             </div>
           </div>
-          <a href="/contact-us" class="apply_now_button">Register Now!</a>
+          <?php 
+$redirectLink = get_field('course_detail_page_apply_redirect','options');
+if( $redirectLink ): 
+    $link_url = $redirectLink['url'];
+    $link_title = $redirectLink['title'];
+    $link_target = $redirectLink['target'] ? $redirectLink['target'] : '_self';
+    ?>
+    <a class="apply_now_button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+<?php endif; ?>
+
         </div>
         <div class="course_features max-570">
           <h3>Course features</h3>
