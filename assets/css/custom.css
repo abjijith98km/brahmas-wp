@@ -258,6 +258,11 @@ header .bottom_header_tab{
   transition: .2s all ease-in-out;
 }
 
+.job_details_section .job_details_bodycopy .apply_btn{
+  width: 100% ;
+  text-align: center;
+}
+
 /* //banner new styling */
 .newhomepage-banner .homepage_banner{
   margin-top: -96px;
@@ -280,4 +285,349 @@ header .bottom_header_tab{
 }
 .sticky_header header .bottom_header_tab .header_wrapper .hamburger_menu li{
   background-color: #000;
+}
+.all_courses_listing_section .all_courses_listing_section_inner .courses_list .course_card p{display: inline-block;}
+
+.jobs_listing_card_wrapper .job_features h6{
+	font-size:1.6rem;
+	margin-bottom:10px;
+	color:#545454;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h3, .job_details_section .job_details_bodycopy .Job_description .responsibilities h4, .job_details_section .job_details_bodycopy .Job_description .responsibilities h5,.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
+	margin-left:30px;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h3{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h4{
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h5{
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.jobs_listing_card_wrapper .job_features h6{
+  align-items: flex-start;
+}
+.jobs_listing_card_wrapper h5{
+  min-height: 44px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities ul{
+  margin-bottom: 30px;
+}
+@media (max-width:570px) {
+  .job_details_section .job_details_bodycopy .Job_description .responsibilities h3, .job_details_section .job_details_bodycopy .Job_description .responsibilities h4, .job_details_section .job_details_bodycopy .Job_description .responsibilities h5,.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
+    margin-left:0px;
+  }
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li::before{
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: block;
+  background-color: #ea4a34;
+  margin-right: 5px;
+  margin-top: 8px;
+  min-width: 6px;
+  display: inline-block;
+}
+.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li, .job_details_section .job_details_bodycopy .Job_description .responsibilities ul li strong{
+  background-color: transparent;
+  color: #212529;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+/* //31/10/2022 */
+.job_details_section .job_details_bodycopy .Job_description .responsibilities h5 strong , .job_details_section .job_details_bodycopy .Job_description .responsibilities strong h5{
+  font-size: 1.6rem;
+    font-weight: 700;
+}
+header .brand_logo img , footer .footer_inner .brand_logo img , .contact_sidemenu .sidebar_header .brand_logo img{
+  width: 100%;
+  height: 100%;
+}
+header .brand_logo , .contact_sidemenu .sidebar_header .brand_logo img{
+  max-width: 230px;
+}
+.woocommerce nav.woocommerce-MyAccount-navigation{
+  height: 100vh;
+  background-color: #212529;
+  padding: 25px 15px ;
+}
+.woocommerce nav.woocommerce-MyAccount-navigation ul > li + li{
+  margin-top: 15px;
+}
+.woocommerce nav.woocommerce-MyAccount-navigation ul > li > a{
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account{
+  margin: 50px 0;
+}
+.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p.woocommerce-form-row{
+  margin-bottom: 20px;
+}
+.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p button.woocommerce-Button.button.wp-element-button{
+ background-color: #ea4a34;
+ color: #fff;
+}
+.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p.woocommerce-form-row label{
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+div.woocommerce{
+  margin: 70px 0;
+  min-height: 40vh;
+}
+.woocommerce p.stars a::before{
+  font-size: 15px;
+}
+.woocommerce p.stars a:hover{
+  color: #ea4a34;
+}
+.woocommerce p.stars a{
+  margin-right: 7px;
+  color: #ea4a34;
+}
+.woocommerce #review_form #respond p.stars{
+  width: max-content;
+}
+.woocommerce-form.woocommerce-form-login.login , .woocommerce-form.woocommerce-form-register.register{
+  max-width: 400px;
+  margin: 50px auto 100px;
+}
+.woocommerce-form.woocommerce-form-login.login p.woocommerce-form-row label , .woocommerce-form.woocommerce-form-register.register p.woocommerce-form-row label , form[method="post"] .woocommerce-address-fields .form-row label{
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.woocommerce-form.woocommerce-form-login.login p.woocommerce-form-row .woocommerce-Input , .woocommerce-form.woocommerce-form-register.register p.woocommerce-form-row .woocommerce-Input ,  form[method="post"] .woocommerce-address-fields .form-row input ,  form[method="post"] .woocommerce-address-fields .form-row select{
+ height: 30px;
+ font-size: 1.5rem;
+ /* font-weight: 700; */
+}
+.woocommerce-message , .woocommerce-info{
+  font-size: 1.6rem;
+}
+.woocommerce-info a{
+  font-size: inherit;
+  color: #ea4a34;
+}
+form[method="post"] .woocommerce-address-fields{
+  margin-top: 20px;
+}
+form[method="post"]{
+  margin: 40px 0;
+  padding: 0 15px;
+}
+.woocommerce-form.woocommerce-form-register.register p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+}
+.woocommerce-form.woocommerce-form-register.register p a{
+    color: #ea4a34;
+}
+.u-column1.col-1 > h2 , .u-column2.col-2 > h2{ 
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.u-column1.col-1 {
+  /* border-right: 1px solid #d3ced2; */
+}
+.u-column1.col-1 , .u-column2.col-2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.comment-respond .comment-reply-title{
+  font-size: 1.6rem;
+}
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product a img{
+  height: auto;
+  aspect-ratio: 1/.8;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+  font-size: 1.4rem;
+}
+.woocommerce ul.products li.product .button{
+  background-color: #ea4a34;
+  color: #fff;
+  margin-top: 25px;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+section.related.products{
+  padding: 40px 0;
+}
+section.related.products > h2{
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #000;
+}
+.results_count p , .results_count form select , .results_count form select option , .woocommerce-error li{
+  font-size: 1.4rem;
+}
+.woocommerce-form.woocommerce-form-login.login p.form-row button.woocommerce-button.button.woocommerce-form-login__submit.wp-element-button ,  .woocommerce-form.woocommerce-form-register.register button.woocommerce-Button.woocommerce-button.button.wp-element-button.woocommerce-form-register__submit ,  form[method="post"] .woocommerce-address-fields button.button.wp-element-button , .woocommerce #review_form #respond .form-submit input , .woocommerce-page .woocommerce-message .button , .woocommerce-page .woocommerce-message .button:hover ,  .woocommerce a.button.wc-backward.wp-element-button{
+  background-color: #ea4a34;
+  color: #fff;
+  margin-top: 25px;
+  font-size: 1.7rem;
+}
+section.professional_courses_bock{
+  min-height: 70vh;
+}
+.woocommerce-page .woocommerce-message .button , .woocommerce-page .woocommerce-message .button:hover {
+  margin-top: 0;
+}
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+  width: 100%;
+  float: unset;
+}
+.woocommerce table.shop_table td.product-name a{
+  font-size: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+.woocommerce table.shop_table td.product-price,
+.woocommerce table.shop_table td.product-subtotal,
+.woocommerce table.shop_table td.product-quantity{
+  vertical-align: top;
+}
+.woocommerce-cart table.cart th , .woocommerce table.shop_table td.product-name , .woocommerce table.shop_table tbody:first-child tr th , .woocommerce table.shop_table tbody:first-child tr td , .woocommerce table.shop_table tbody:first-child tr td span , .woocommerce table.shop_table tbody:first-child tr td bdi , .woocommerce ul#shipping_method li label , .woocommerce .woocommerce-shipping-destination  , .woocommerce .woocommerce-shipping-destination  strong{
+  font-size: 1.4rem;
+  vertical-align: top;
+}
+.woocommerce-page table.cart img {
+  width: 50px;
+  height: 50px;
+}
+.woocommerce .cart .button , .woocommerce .cart .button:hover, .woocommerce .cart input.button , .woocommerce .cart input.button:hover , .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
+  background-color: #ea4a34 !important;
+  color: #fff !important;
+  font-size: 1.2rem;
+}
+.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme{
+  display: block;
+  margin-top: 15px;
+}
+.account_navigation svg:hover{
+  color: #000;
+}
+header .account_navigation.main_navigation ul.sub_menu_dropdown li:last-child{
+margin-bottom: 0;
+}
+.my_account_page_banner .woocommerce-MyAccount-content{
+  width: unset;
+}
+.account_navigation svg{
+  width: 25px;
+  color: #000;
+  height: 25px;
+  cursor: pointer;
+  object-fit: contain;
+}
+.woocommerce-MyAccount-navigation{
+  display: none !important;
+}
+.woocommerce-MyAccount-content{
+  float: unset !important;
+  margin: auto !important;
+}
+header .account_navigation.main_navigation > li{
+  position: relative;
+}
+header .account_navigation.main_navigation ul.sub_menu_dropdown  li{
+  margin-bottom: 20px;
+}
+header .account_navigation.main_navigation ul.sub_menu_dropdown  li a{
+  display: block;
+  width: max-content;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+header .account_navigation.main_navigation ul.sub_menu_dropdown  {
+  position: absolute;
+  top: calc(100% + 25px);
+  right: 0%;
+  /* transform: translateX(-50%); */
+  background-color: #263b88;
+  width: max-content;
+  padding: 20px 25px;
+  border-radius: 5px;
+  transition: .4s all ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+header .account_navigation.main_navigation > li:hover  ul.sub_menu_dropdown{
+  opacity: 1;
+    visibility: visible;
+    top: calc(100% + 10px);
+  }
+  .checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row label abbr{
+    font-size: inherit;
+  }
+  .checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p.form-row label  , .woocommerce-additional-fields__field-wrapper label{
+    font-size: 1.5rem;
+  }
+  .checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper{
+  padding: 10px;
+  
+}
+.checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields p.form-row input.input-text , .checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields p.form-row select , .checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields p.form-row select option , .select2-container--default .select2-selection--single .select2-selection__rendered , .woocommerce-additional-fields__field-wrapper textarea{
+  font-size: 1.4rem;
+  padding: 5px;
+}
+.checkout.woocommerce-checkout #customer_details .woocommerce-billing-fields > h3 , .woocommerce-additional-fields > h3{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.select2-container .select2-selection--single{
+  height: unset;
+}
+#customer_details{
+  margin-bottom: 50px;
+}
+.woocommerce table.shop_table th{
+  font-size: 1.5rem;
+}
+.woocommerce table.shop_table td , .woocommerce table.shop_table td span , .woocommerce table.shop_table td span bdi{
+  font-size: 1.3rem;
+}
+.woocommerce-checkout #payment ul.payment_methods li label[for="payment_method_stripe"] , .woocommerce form .form-row label{
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.wc-stripe-elements-field{
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 5px;
 }
