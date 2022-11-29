@@ -615,6 +615,16 @@ header .account_navigation.main_navigation > li:hover  ul.sub_menu_dropdown{
 }
 #customer_details{
   margin-bottom: 50px;
+  background-color: #fff;
+  padding: 15px 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px #c1c1c1;
+}
+.woocommerce table.shop_table{
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px #c1c1c1;
 }
 .woocommerce table.shop_table th{
   font-size: 1.5rem;
