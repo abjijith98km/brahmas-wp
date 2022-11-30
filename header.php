@@ -5,7 +5,7 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="<?php the_field('site_titlebar_logo','options');?>" />
+  <link rel="icon" href="<?php the_field('site_titlebar_logo', 'options'); ?>" />
 
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <?php wp_head(); ?>
@@ -98,7 +98,7 @@
     <div class="bottom_header_tab">
       <div class="container-fluid">
         <div class="header_wrapper">
-          <a href="/brahmasv1" class="brand_logo">
+          <a href="/" class="brand_logo">
             <?php
             $siteLogo = get_field('site_logo', 'options')
             ?>
@@ -191,18 +191,47 @@
               </div>
             </div>
           </nav>
-          <ul class="hamburger_menu">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+
+          <div class="right_nav_wrap d-flex align-items-center">
+            <a href="http://localhost/brahmasv1/cart" class="account_navigation me-3">
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+            </a>
+
+            <ul class="account_navigation main_navigation">
+              <li>
+                <a <?php if (!is_user_logged_in()) echo 'href="http://localhost/brahmasv1/my-account"'; ?>>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                  </svg>
+                </a>
+                <?php
+                if (is_user_logged_in()) :
+                ?>
+                  <ul class="sub_menu_dropdown">
+                    <li><a href="http://localhost/brahmasv1/my-account/orders">My courses</a></li>
+                    <li><a href="http://localhost/brahmasv1/my-account/edit-address">Addresses</a></li>
+                    <li><a href="http://localhost/brahmasv1/my-account/edit-account">Edit account</a></li>
+                    <li><a href="<?php wp_logout_url(get_permalink(wc_get_page_id('myaccount'))); ?>">Logout</a></li>
+                  </ul>
+                <?php endif; ?>
+              </li>
+            </ul>
+            <ul class="hamburger_menu">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <aside class="contact_sidemenu">
     <div class="sidebar_header">
-      <a href="/brahmasv1" class="brand_logo">
+      <a href="/" class="brand_logo">
         <img src="<?php $sidebarLogo = get_field('sidebar_logo', 'options');
                   echo esc_url($sidebarLogo['url']); ?>" alt="brahmas site hrms">
       </a>
@@ -214,19 +243,28 @@
     </div>
     <div class="body_contents_wrp">
       <div class="top_contennts">
-        <h3>Hear from top experts on the topics that speak to the heart of your goals.</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, et nobis officia maiores ducimus sed aperiam maxime! Nulla explicabo totam accusamus quod? Dolorem corrupti at modi doloremque ullam! Voluptatibus, adipisci.</p>
-        <a href="/contact" class="explore_more">Contact us <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
-          </svg>
-        </a>
+        <h3><?php the_field('sidebar_caption', 'options'); ?></h3>
+        <p><?php the_field('sidebar_description', 'options'); ?></p>
+
+        <?php
+        $sidelink = get_field('sidebar_link', 'options');
+        if ($sidelink) :
+          $link_url = $sidelink['url'];
+          $link_title = $sidelink['title'];
+          $link_target = $sidelink['target'] ? $sidelink['target'] : '_self';
+        ?>
+          <a class="explore_more" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" />
+            </svg></a>
+        <?php endif; ?>
+
       </div>
       <div class="sidebar_footer row">
         <div class="col-12 col-md-6">
           <div class="brand_address">
-            <h3>Westwood Center, St.Vincent Convent Road, Palarivattom, Cochin – 25</h3>
-            <h3>+91 987 345 2345</h3>
-            <h3>brahmassitehrms@gmail.com</h3>
+            <h3><?php the_field('sidebar_footer_address', 'options'); ?></h3>
+            <h3><?php the_field('sidebar_foooter_mobile_number', 'options'); ?></h3>
+            <h3><?php the_field('sidebar_footer_mail_id', 'options'); ?></h3>
           </div>
         </div>
         <div class="col-12 col-md-6">

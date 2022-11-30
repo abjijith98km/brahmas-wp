@@ -22,14 +22,20 @@
               // Setup this post for WP functions (variable must be named $post).
               setup_postdata($post); ?>
 
-              <div class="coach_tab">
-                <img src=" <?php $coachimg =  get_field('coach_image', $post);
-                            echo esc_url($coachimg['url']); ?>" alt="<?php the_title(); ?>">
+              <!-- <div class="coach_tab">
+                <img src=" <?php
+                //  $coachimg =  get_field('coach_image', $post);
+                //             echo esc_url($coachimg['url']);
+                             ?>" alt="<?php
+                              // the_title();
+                               ?>">
                 <div class="body_copy">
                   <h5>Instructor</h5>
-                  <h6><?php the_title(); ?></h6>
+                  <h6><?php
+                  //  the_title();
+                    ?></h6>
                 </div>
-              </div>
+              </div> -->
             <?php endforeach; ?>
             <?php
             // Reset the global post object so that the rest of the page works correctly.

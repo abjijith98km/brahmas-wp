@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer_inner row">
       <div class="col-12 col-md-12 col-lg-3">
-        <a href="/brahmasv1" class="brand_logo">
+        <a href="/" class="brand_logo">
           <img src="<?php $footerimg = get_field('footer_logo', 'options');
                     echo esc_url($footerimg['url']); ?>" alt="brahmas site hrms">
         </a>
@@ -85,13 +85,21 @@
               <li>
                 <?php
                 $primlink = get_sub_field('link');
-                if ($primlink) :
+                $primfile = get_sub_field('text_render');
+                $radio = get_sub_field('radio_button');
+                if ($primlink ) {
                   $link_url = $primlink['url'];
                   $link_title = $primlink['title'];
                   $link_target = $primlink['target'] ? $primlink['target'] : '_self';
+                  echo '<a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>';
+                }else{
+                 echo '<button class="btn btn-primary">Click</button>';
+                }
+                  
                 ?>
-                  <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
-                <?php endif; ?>
+                <?php var_dump($radio);?>
+                
+                  
               </li>
             <?php endwhile; ?>
           </ul>

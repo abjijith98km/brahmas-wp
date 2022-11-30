@@ -32,111 +32,62 @@
 </section>
 
 <?php if (have_rows('benefits')) : ?>
-    <section class="benefits_of_coaching">
-      <div class="container">
-        <div class="benefits_of_coaching_inner">
-          <h3><?php the_field('benefits_title');?></h3>
-          <div class="row">
-            <?php while (have_rows('benefits')) : the_row();
-              $num = get_sub_field('number');
-              $title = get_sub_field('title');
-              $desc = get_sub_field('description');
-            ?>
-              <div class="col-12 col-lg-4">
-                <div class="benefit">
-                  <span><?php echo $num;?></span>
-                  <div class="body_content">
-                    <h4><?php echo $title;?></h4>
-                    <p><?php echo $desc;?></p>
-                  </div>
+  <section class="benefits_of_coaching">
+    <div class="container">
+      <div class="benefits_of_coaching_inner">
+        <h3><?php the_field('benefits_title'); ?></h3>
+        <div class="row">
+          <?php while (have_rows('benefits')) : the_row();
+            $num = get_sub_field('number');
+            $title = get_sub_field('title');
+            $desc = get_sub_field('description');
+          ?>
+            <div class="col-12 col-lg-4">
+              <div class="benefit">
+                <span><?php echo $num; ?></span>
+                <div class="body_content">
+                  <h4><?php echo $title; ?></h4>
+                  <p><?php echo $desc; ?></p>
                 </div>
               </div>
-            <?php endwhile; ?>
-          </div>
+            </div>
+          <?php endwhile; ?>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 <?php endif; ?>
+
+
 
 <section class="our_team">
   <div class="container">
     <div class="custom_title_wrapper">
-      <h2>Our awesome team</h2><!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p> -->
+      <h2><?php the_field('our_team_title'); ?></h2><!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p> -->
     </div>
-    <div class="our_team_grid row">
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/main-team-img-4.jpg" alt="Barney Stinson">
+
+
+    <?php if (have_rows('team_members')) : ?>
+      <div class="our_team_grid row">
+        <?php while (have_rows('team_members')) : the_row();
+          $image = get_sub_field('image');
+        ?>
+      
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="member_detail_card">
+              <div class="image">
+                <img src="<?php echo $image; ?>" alt="Barney Stinson">
+              </div>
+              <h3><?php the_sub_field('name'); ?></h3>
+              <h6><?php the_sub_field('designation'); ?></h6>
+            </div>
           </div>
-          <h3>Barney Stinson</h3>
-          <h6>CEO</h6>
-        </div>
+        <?php endwhile; ?>
+
       </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/main-team-img-5.jpg" alt="Lent Aldrin">
-          </div>
-          <h3>Lent Aldrin</h3>
-          <h6>Human Resource</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/main-team-img-3.jpg" alt="Marsha Eriksen">
-          </div>
-          <h3>Marsha Eriksen</h3>
-          <h6>Technical</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/main-team-img-1.jpg" alt="Teda Mosty">
-          </div>
-          <h3>Teda Mosty</h3>
-          <h6>P.M.</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://coachfocus.qodeinteractive.com/wp-content/uploads/2022/04/main-team-img-8.jpg" alt="Maden Schmidt">
-          </div>
-          <h3>Maden Schmidt</h3>
-          <h6>PRO</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://emeritus.qodeinteractive.com/wp-content/uploads/2020/11/course-single-instructor-03-big-1.jpg" alt="Loreta Smith">
-          </div>
-          <h3>Loreta Smith</h3>
-          <h6>Teacher</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://emeritus.qodeinteractive.com/wp-content/uploads/2020/12/p2-instructor-03.jpg" alt="Leah Chatman">
-          </div>
-          <h3>Leah Chatman</h3>
-          <h6>GM</h6>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <div class="member_detail_card">
-          <div class="image">
-            <img src="https://emeritus.qodeinteractive.com/wp-content/uploads/2020/12/course-single-instructor-01-big.jpg" alt="">
-          </div>
-          <h3>Brenda Harris</h3>
-          <h6>Teacher</h6>
-        </div>
-      </div>
-    </div>
+    <?php endif; ?>
+
+
   </div>
 </section>
 <?php get_footer(); ?>
