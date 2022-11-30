@@ -1,143 +1,203 @@
-.spl_tactics_grid .spl_tactics_grid_inner .spl_card-wrp .spl_logo img{
-	width:40px;
-	height:40px;
-	object-fit:contain;
+.spl_tactics_grid .spl_tactics_grid_inner .spl_card-wrp .spl_logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
-footer .footer_inner>div .you_may_like_suggestion_list ul li a .course_detail span{
-display:flex;
-	align-items:center;
+footer
+  .footer_inner
+  > div
+  .you_may_like_suggestion_list
+  ul
+  li
+  a
+  .course_detail
+  span {
+  display: flex;
+  align-items: center;
 }
-footer .footer_inner>div .you_may_like_suggestion_list ul li a .course_detail span svg{
-	fill:#ea4a34;
-	margin-left:5px;
+footer
+  .footer_inner
+  > div
+  .you_may_like_suggestion_list
+  ul
+  li
+  a
+  .course_detail
+  span
+  svg {
+  fill: #ea4a34;
+  margin-left: 5px;
 }
-footer .footer_inner>div .you_may_like_suggestion_list ul li a .course_detail h6{
-	font-size:1.4rem;
+footer
+  .footer_inner
+  > div
+  .you_may_like_suggestion_list
+  ul
+  li
+  a
+  .course_detail
+  h6 {
+  font-size: 1.4rem;
 }
-.course_details_content_block .course_detail_body .details_content p strong{
-	font-size:inherit;
-	font-weight:700;
+.course_details_content_block .course_detail_body .details_content p strong {
+  font-size: inherit;
+  font-weight: 700;
 }
-.blog_details_body .blog_details_body_row .content_bodycopy blockquote p{
-    font-size: 3.6rem;
-    line-height: 5.5rem;
-    color: #212529;
-    font-weight: 700;
-    margin: 50px auto;
-    text-align: center;
-    position: relative;
+.blog_details_body .blog_details_body_row .content_bodycopy blockquote p {
+  font-size: 3.6rem;
+  line-height: 5.5rem;
+  color: #212529;
+  font-weight: 700;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
 }
-.learm_more_about_courses_contact_box .content_details_wrap p{
-	display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.learm_more_about_courses_contact_box .content_details_wrap p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.you_may_like_suggestion_list ul li a .course_detail{
-	flex:1;
+.you_may_like_suggestion_list ul li a .course_detail {
+  flex: 1;
 }
-.job_details_section .job_details_bodycopy .Job_description ul li p{
-    color: #fff;
-    font-size: 16px;
-	margin:0;
-    font-weight: 300;
-    line-height: 24px;
+.job_details_section .job_details_bodycopy .Job_description ul li p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 300;
+  line-height: 24px;
 }
-.job_details_section .job_details_bodycopy .job_title .social_media_sharing li a svg{
-width:80%;
-	height:80%;
-	object-fit:contain;
+.job_details_section
+  .job_details_bodycopy
+  .job_title
+  .social_media_sharing
+  li
+  a
+  svg {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
-footer .footer_inner>div .you_may_like_suggestion_list{
-margin-bottom:0;
+footer .footer_inner > div .you_may_like_suggestion_list {
+  margin-bottom: 0;
 }
 .contact_us_details .contact_us_details_wrp .contact_us_form form .send_msg {
-	
-	display:flex;
-	align-items;
-	justify-content:center;
-	max-height:40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 40px;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form .send_msg .spinner-border , .news_letter form fieldset .alert.alert-light{
-	display:none;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  form
+  .send_msg
+  .spinner-border,
+.news_letter form fieldset .alert.alert-light {
+  display: none;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form  .wpcf7-not-valid-tip  {
-	font-size:12px;
-	font-weight:600;
-	position:absolute;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  form
+  .wpcf7-not-valid-tip {
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
 }
-.news_letter form fieldset .wpcf7-not-valid-tip{
-	position:absolute;
-	color:#fff;
+.news_letter form fieldset .wpcf7-not-valid-tip {
+  position: absolute;
+  color: #fff;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form.submitting .send_msg .spinner-border , .news_letter form.submitting fieldset .input_wrap button .spinner-border{
-	display:inline-block;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  form.submitting
+  .send_msg
+  .spinner-border,
+.news_letter form.submitting fieldset .input_wrap button .spinner-border {
+  display: inline-block;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form.submitting , .news_letter form.submitting {
-	opacity:0.7;
-	pointer-events:none;
+.contact_us_details .contact_us_details_wrp .contact_us_form form.submitting,
+.news_letter form.submitting {
+  opacity: 0.7;
+  pointer-events: none;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form.sent fieldset{
-	display:none;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  form.sent
+  fieldset {
+  display: none;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form .alert.alert-success , .news_letter form fieldset .input_wrap button .spinner-border{
-	display:none;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  .alert.alert-success,
+.news_letter form fieldset .input_wrap button .spinner-border {
+  display: none;
 }
-.contact_us_details .contact_us_details_wrp .contact_us_form form.sent .alert.alert-success{
-	display:block;
+.contact_us_details
+  .contact_us_details_wrp
+  .contact_us_form
+  form.sent
+  .alert.alert-success {
+  display: block;
 }
-.news_letter form fieldset .input_wrap button{
-	display:flex;
-	align-items:center;
+.news_letter form fieldset .input_wrap button {
+  display: flex;
+  align-items: center;
 }
-.news_letter form.sent fieldset .input_wrap{
-	display:none;
+.news_letter form.sent fieldset .input_wrap {
+  display: none;
 }
-.news_letter form.sent fieldset .alert.alert-light{
-	display:block;
+.news_letter form.sent fieldset .alert.alert-light {
+  display: block;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap form  .spinner-border{
-	display:none;
+.contact_us_form_pixel .contact_us_form_pixel_wrap form .spinner-border {
+  display: none;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form .wpcf7-not-valid-tip{
-	position:absolute;
-	font-size:12px;
-	width:max-content;
-	display:block;
+.contact_us_form_pixel .contact_us_form_pixel_wrap form .wpcf7-not-valid-tip {
+  position: absolute;
+  font-size: 12px;
+  width: max-content;
+  display: block;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.submitting{
-	opacity:0.7;
-pointer-events:none;
+.contact_us_form_pixel .contact_us_form_pixel_wrap form.submitting {
+  opacity: 0.7;
+  pointer-events: none;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.submitting .spinner-border{
-	display:block;
+.contact_us_form_pixel
+  .contact_us_form_pixel_wrap
+  form.submitting
+  .spinner-border {
+  display: block;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form .alert.alert-success{
-	display:none;
+.contact_us_form_pixel .contact_us_form_pixel_wrap form .alert.alert-success {
+  display: none;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.sent > .row , .contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.sent > h3 , form.sent > .row , .contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.sent input{
-	display:none;
+.contact_us_form_pixel .contact_us_form_pixel_wrap form.sent > .row,
+.contact_us_form_pixel .contact_us_form_pixel_wrap form.sent > h3,
+form.sent > .row,
+.contact_us_form_pixel .contact_us_form_pixel_wrap form.sent input {
+  display: none;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap 
-form.sent .alert.alert-success{
-	display:block;
+.contact_us_form_pixel
+  .contact_us_form_pixel_wrap
+  form.sent
+  .alert.alert-success {
+  display: block;
 }
-.contact_us_form_pixel .contact_us_form_pixel_wrap{
-	background-image:none;
+.contact_us_form_pixel .contact_us_form_pixel_wrap {
+  background-image: none;
 }
-.contact_us_form_pixel{
-	    background-image: url(https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-	background-position:center;
-	background-size:cover;
-	background-repeat:no-repeat;
+.contact_us_form_pixel {
+  background-image: url(https://images.pexels.com/photos/326576/pexels-photo-326576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 //content pages
 .content_pages_section {
@@ -236,106 +296,204 @@ form.sent .alert.alert-success{
   }
 }
 
-.homepage_banner .homepage_banner_slider .banner_slide .slidecontent .banner_contnt h6{
-	    font-size: 1.6rem;
-    line-height: 2.4rem;
-	    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.homepage_banner
+  .homepage_banner_slider
+  .banner_slide
+  .slidecontent
+  .banner_contnt
+  h6 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
-.jobs_listing_card_wrapper .company_image{
+.jobs_listing_card_wrapper .company_image {
   height: 175px;
 }
 
-#comments{
+#comments {
   display: none !important;
 }
-.comment-meta.commentmetadata{
+.comment-meta.commentmetadata {
   font-size: 13px;
 }
-header .bottom_header_tab{
-  transition: .2s all ease-in-out;
+header .bottom_header_tab {
+  transition: 0.2s all ease-in-out;
 }
 
-.job_details_section .job_details_bodycopy .apply_btn{
-  width: 100% ;
+.job_details_section .job_details_bodycopy .apply_btn {
+  width: 100%;
   text-align: center;
 }
 
 /* //banner new styling */
-.newhomepage-banner .homepage_banner{
+.newhomepage-banner .homepage_banner {
   margin-top: -96px;
   height: calc(100vh - 40px);
 }
-.newhomepage-banner header .bottom_header_tab{
+.newhomepage-banner header .bottom_header_tab {
   background-color: transparent;
 }
-.newhomepage-banner header .bottom_header_tab .header_wrapper nav .main_navigation>li a{
+.newhomepage-banner
+  header
+  .bottom_header_tab
+  .header_wrapper
+  nav
+  .main_navigation
+  > li
+  a {
   color: #fff;
 }
-.newhomepage-banner header .bottom_header_tab .header_wrapper .hamburger_menu li{
+.newhomepage-banner
+  header
+  .bottom_header_tab
+  .header_wrapper
+  .hamburger_menu
+  li {
   background-color: #fff;
 }
-.sticky_header header .bottom_header_tab{
+.sticky_header header .bottom_header_tab {
   background-color: #fff;
 }
-.sticky_header header .bottom_header_tab .header_wrapper nav .main_navigation>li a{
+.sticky_header
+  header
+  .bottom_header_tab
+  .header_wrapper
+  nav
+  .main_navigation
+  > li
+  a {
   color: #000;
 }
-.sticky_header header .bottom_header_tab .header_wrapper .hamburger_menu li{
+.sticky_header header .bottom_header_tab .header_wrapper .hamburger_menu li {
   background-color: #000;
 }
-.all_courses_listing_section .all_courses_listing_section_inner .courses_list .course_card p{display: inline-block;}
+.all_courses_listing_section
+  .all_courses_listing_section_inner
+  .courses_list
+  .course_card
+  p {
+  display: inline-block;
+}
 
-.jobs_listing_card_wrapper .job_features h6{
-	font-size:1.6rem;
-	margin-bottom:10px;
-	color:#545454;
+.jobs_listing_card_wrapper .job_features h6 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #545454;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h3, .job_details_section .job_details_bodycopy .Job_description .responsibilities h4, .job_details_section .job_details_bodycopy .Job_description .responsibilities h5,.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
-	margin-left:30px;
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h3,
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h4,
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h5,
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h6 {
+  margin-left: 30px;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h3{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h3 {
   font-size: 2rem;
   font-weight: 700;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h4{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h4 {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h5{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h5 {
   font-size: 1.6rem;
   font-weight: 700;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h6 {
   font-size: 1.4rem;
   font-weight: 700;
 }
-.jobs_listing_card_wrapper .job_features h6{
+.jobs_listing_card_wrapper .job_features h6 {
   align-items: flex-start;
 }
-.jobs_listing_card_wrapper h5{
+.jobs_listing_card_wrapper h5 {
   min-height: 44px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities ul{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  ul {
   margin-bottom: 30px;
 }
-@media (max-width:570px) {
-  .job_details_section .job_details_bodycopy .Job_description .responsibilities h3, .job_details_section .job_details_bodycopy .Job_description .responsibilities h4, .job_details_section .job_details_bodycopy .Job_description .responsibilities h5,.job_details_section .job_details_bodycopy .Job_description .responsibilities h6{
-    margin-left:0px;
+@media (max-width: 570px) {
+  .job_details_section
+    .job_details_bodycopy
+    .Job_description
+    .responsibilities
+    h3,
+  .job_details_section
+    .job_details_bodycopy
+    .Job_description
+    .responsibilities
+    h4,
+  .job_details_section
+    .job_details_bodycopy
+    .Job_description
+    .responsibilities
+    h5,
+  .job_details_section
+    .job_details_bodycopy
+    .Job_description
+    .responsibilities
+    h6 {
+    margin-left: 0px;
   }
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  ul
+  li {
   position: relative;
   display: block;
   width: 100%;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li::before{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  ul
+  li::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -347,7 +505,19 @@ header .bottom_header_tab{
   min-width: 6px;
   display: inline-block;
 }
-.job_details_section .job_details_bodycopy .Job_description .responsibilities ul li, .job_details_section .job_details_bodycopy .Job_description .responsibilities ul li strong{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  ul
+  li,
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  ul
+  li
+  strong {
   background-color: transparent;
   color: #212529;
   font-size: 1.5rem;
@@ -355,97 +525,137 @@ header .bottom_header_tab{
 }
 
 /* //31/10/2022 */
-.job_details_section .job_details_bodycopy .Job_description .responsibilities h5 strong , .job_details_section .job_details_bodycopy .Job_description .responsibilities strong h5{
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  h5
+  strong,
+.job_details_section
+  .job_details_bodycopy
+  .Job_description
+  .responsibilities
+  strong
+  h5 {
   font-size: 1.6rem;
-    font-weight: 700;
+  font-weight: 700;
 }
-header .brand_logo img , footer .footer_inner .brand_logo img , .contact_sidemenu .sidebar_header .brand_logo img{
+header .brand_logo img,
+footer .footer_inner .brand_logo img,
+.contact_sidemenu .sidebar_header .brand_logo img {
   width: 100%;
   height: 100%;
 }
-header .brand_logo , .contact_sidemenu .sidebar_header .brand_logo img{
+header .brand_logo,
+.contact_sidemenu .sidebar_header .brand_logo img {
   max-width: 230px;
 }
-.woocommerce nav.woocommerce-MyAccount-navigation{
+.woocommerce nav.woocommerce-MyAccount-navigation {
   height: 100vh;
   background-color: #212529;
-  padding: 25px 15px ;
+  padding: 25px 15px;
 }
-.woocommerce nav.woocommerce-MyAccount-navigation ul > li + li{
+.woocommerce nav.woocommerce-MyAccount-navigation ul > li + li {
   margin-top: 15px;
 }
-.woocommerce nav.woocommerce-MyAccount-navigation ul > li > a{
+.woocommerce nav.woocommerce-MyAccount-navigation ul > li > a {
   font-size: 1.5rem;
   color: #fff;
   font-weight: 400;
   text-decoration: none;
 }
-.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account{
+.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account {
   margin: 50px 0;
 }
-.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p.woocommerce-form-row{
+.woocommerce-MyAccount-content
+  form.woocommerce-EditAccountForm.edit-account
+  p.woocommerce-form-row {
   margin-bottom: 20px;
 }
-.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p button.woocommerce-Button.button.wp-element-button{
- background-color: #ea4a34;
- color: #fff;
+.woocommerce-MyAccount-content
+  form.woocommerce-EditAccountForm.edit-account
+  p
+  button.woocommerce-Button.button.wp-element-button {
+  background-color: #ea4a34;
+  color: #fff;
 }
-.woocommerce-MyAccount-content form.woocommerce-EditAccountForm.edit-account p.woocommerce-form-row label{
+.woocommerce-MyAccount-content
+  form.woocommerce-EditAccountForm.edit-account
+  p.woocommerce-form-row
+  label {
   margin-bottom: 10px;
   font-size: 1.5rem;
   font-weight: 700;
 }
-div.woocommerce{
+div.woocommerce {
   margin: 70px 0;
   min-height: 40vh;
 }
-.woocommerce p.stars a::before{
+.woocommerce p.stars a::before {
   font-size: 15px;
 }
-.woocommerce p.stars a:hover{
+.woocommerce p.stars a:hover {
   color: #ea4a34;
 }
-.woocommerce p.stars a{
+.woocommerce p.stars a {
   margin-right: 7px;
   color: #ea4a34;
 }
-.woocommerce #review_form #respond p.stars{
+.woocommerce #review_form #respond p.stars {
   width: max-content;
 }
-.woocommerce-form.woocommerce-form-login.login , .woocommerce-form.woocommerce-form-register.register{
+.woocommerce-form.woocommerce-form-login.login,
+.woocommerce-form.woocommerce-form-register.register {
   max-width: 400px;
   margin: 50px auto 100px;
 }
-.woocommerce-form.woocommerce-form-login.login p.woocommerce-form-row label , .woocommerce-form.woocommerce-form-register.register p.woocommerce-form-row label , form[method="post"] .woocommerce-address-fields .form-row label{
+.woocommerce-form.woocommerce-form-login.login p.woocommerce-form-row label,
+.woocommerce-form.woocommerce-form-register.register
+  p.woocommerce-form-row
+  label,
+form[method="post"] .woocommerce-address-fields .form-row label {
   margin-bottom: 10px;
   font-size: 1.5rem;
   line-height: 1;
   font-weight: 700;
 }
-.woocommerce-form.woocommerce-form-login.login p.woocommerce-form-row .woocommerce-Input , .woocommerce-form.woocommerce-form-register.register p.woocommerce-form-row .woocommerce-Input ,  form[method="post"] .woocommerce-address-fields .form-row input ,  form[method="post"] .woocommerce-address-fields .form-row select{
- height: 30px;
- font-size: 1.5rem;
- /* font-weight: 700; */
+.woocommerce-form.woocommerce-form-login.login
+  p.woocommerce-form-row
+  .woocommerce-Input,
+.woocommerce-form.woocommerce-form-register.register
+  p.woocommerce-form-row
+  .woocommerce-Input,
+form[method="post"] .woocommerce-address-fields .form-row input,
+form[method="post"] .woocommerce-address-fields .form-row select {
+  height: 30px;
+  font-size: 1.5rem;
+  /* font-weight: 700; */
 }
-.woocommerce-message{
+.woocommerce-message,
+.woocommerce-info {
   font-size: 1.6rem;
 }
-form[method="post"] .woocommerce-address-fields{
+.woocommerce-info a {
+  font-size: inherit;
+  color: #ea4a34;
+}
+form[method="post"] .woocommerce-address-fields {
   margin-top: 20px;
 }
-form[method="post"]{
+form[method="post"] {
   margin: 40px 0;
   padding: 0 15px;
 }
-.woocommerce-form.woocommerce-form-register.register p{
+.woocommerce-form.woocommerce-form-register.register p {
   font-size: 1.2rem;
   font-weight: 400;
   color: #000;
 }
-.woocommerce-form.woocommerce-form-register.register p a{
-    color: #ea4a34;
+.woocommerce-form.woocommerce-form-register.register p a {
+  color: #ea4a34;
 }
-.u-column1.col-1 > h2 , .u-column2.col-2 > h2{ 
+.u-column1.col-1 > h2,
+.u-column2.col-2 > h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
@@ -453,21 +663,23 @@ form[method="post"]{
 .u-column1.col-1 {
   /* border-right: 1px solid #d3ced2; */
 }
-.u-column1.col-1 , .u-column2.col-2{
+.u-column1.col-1,
+.u-column2.col-2 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.comment-respond .comment-reply-title{
+.comment-respond .comment-reply-title {
   font-size: 1.6rem;
 }
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product a img{
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product a img {
   height: auto;
-  aspect-ratio: 1/.8;
+  aspect-ratio: 1/0.8;
 }
-.woocommerce ul.products li.product .woocommerce-loop-product__title{
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
   font-size: 1.4rem;
 }
-.woocommerce ul.products li.product .button{
+.woocommerce ul.products li.product .button {
   background-color: #ea4a34;
   color: #fff;
   margin-top: 25px;
@@ -475,45 +687,67 @@ form[method="post"]{
   margin-top: 5px;
   padding: 5px 10px;
 }
-section.related.products{
+section.related.products {
   padding: 40px 0;
 }
-section.related.products > h2{
+section.related.products > h2 {
   font-size: 2.4rem;
   font-weight: 600;
   margin-bottom: 20px;
   border-bottom: 2px solid #000;
 }
-.results_count p , .results_count form select , .results_count form select option , .woocommerce-error li{
+.results_count p,
+.results_count form select,
+.results_count form select option,
+.woocommerce-error li {
   font-size: 1.4rem;
 }
-.woocommerce-form.woocommerce-form-login.login p.form-row button.woocommerce-button.button.woocommerce-form-login__submit.wp-element-button ,  .woocommerce-form.woocommerce-form-register.register button.woocommerce-Button.woocommerce-button.button.wp-element-button.woocommerce-form-register__submit ,  form[method="post"] .woocommerce-address-fields button.button.wp-element-button , .woocommerce #review_form #respond .form-submit input , .woocommerce-page .woocommerce-message .button , .woocommerce-page .woocommerce-message .button:hover ,  .woocommerce a.button.wc-backward.wp-element-button{
+.woocommerce-form.woocommerce-form-login.login
+  p.form-row
+  button.woocommerce-button.button.woocommerce-form-login__submit.wp-element-button,
+.woocommerce-form.woocommerce-form-register.register
+  button.woocommerce-Button.woocommerce-button.button.wp-element-button.woocommerce-form-register__submit,
+form[method="post"] .woocommerce-address-fields button.button.wp-element-button,
+.woocommerce #review_form #respond .form-submit input,
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-message .button:hover,
+.woocommerce a.button.wc-backward.wp-element-button {
   background-color: #ea4a34;
   color: #fff;
   margin-top: 25px;
   font-size: 1.7rem;
 }
-section.professional_courses_bock{
+section.professional_courses_bock {
   min-height: 70vh;
 }
-.woocommerce-page .woocommerce-message .button , .woocommerce-page .woocommerce-message .button:hover {
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-message .button:hover {
   margin-top: 0;
 }
-.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
   width: 100%;
   float: unset;
 }
-.woocommerce table.shop_table td.product-name a{
+.woocommerce table.shop_table td.product-name a {
   font-size: inherit;
   text-decoration: none;
   font-weight: 600;
 }
 .woocommerce table.shop_table td.product-price,
 .woocommerce table.shop_table td.product-subtotal,
-.woocommerce table.shop_table td.product-quantity{
+.woocommerce table.shop_table td.product-quantity {
   vertical-align: top;
 }
-.woocommerce-cart table.cart th , .woocommerce table.shop_table td.product-name , .woocommerce table.shop_table tbody:first-child tr th , .woocommerce table.shop_table tbody:first-child tr td , .woocommerce table.shop_table tbody:first-child tr td span , .woocommerce table.shop_table tbody:first-child tr td bdi , .woocommerce ul#shipping_method li label , .woocommerce .woocommerce-shipping-destination  , .woocommerce .woocommerce-shipping-destination  strong{
+.woocommerce-cart table.cart th,
+.woocommerce table.shop_table td.product-name,
+.woocommerce table.shop_table tbody:first-child tr th,
+.woocommerce table.shop_table tbody:first-child tr td,
+.woocommerce table.shop_table tbody:first-child tr td span,
+.woocommerce table.shop_table tbody:first-child tr td bdi,
+.woocommerce ul#shipping_method li label,
+.woocommerce .woocommerce-shipping-destination,
+.woocommerce .woocommerce-shipping-destination strong {
   font-size: 1.4rem;
   vertical-align: top;
 }
@@ -521,45 +755,49 @@ section.professional_courses_bock{
   width: 50px;
   height: 50px;
 }
-.woocommerce .cart .button , .woocommerce .cart .button:hover, .woocommerce .cart input.button , .woocommerce .cart input.button:hover , .woocommerce-cart .wc-proceed-to-checkout a.checkout-button{
+.woocommerce .cart .button,
+.woocommerce .cart .button:hover,
+.woocommerce .cart input.button,
+.woocommerce .cart input.button:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
   background-color: #ea4a34 !important;
   color: #fff !important;
   font-size: 1.2rem;
 }
-.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme{
+.woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme {
   display: block;
   margin-top: 15px;
 }
-.account_navigation svg:hover{
+.account_navigation svg:hover {
   color: #000;
 }
-header .account_navigation.main_navigation ul.sub_menu_dropdown li:last-child{
-margin-bottom: 0;
+header .account_navigation.main_navigation ul.sub_menu_dropdown li:last-child {
+  margin-bottom: 0;
 }
-.my_account_page_banner .woocommerce-MyAccount-content{
+.my_account_page_banner .woocommerce-MyAccount-content {
   width: unset;
 }
-.account_navigation svg{
+.account_navigation svg {
   width: 25px;
   color: #000;
   height: 25px;
   cursor: pointer;
   object-fit: contain;
 }
-.woocommerce-MyAccount-navigation{
+.woocommerce-MyAccount-navigation {
   display: none !important;
 }
-.woocommerce-MyAccount-content{
+.woocommerce-MyAccount-content {
   float: unset !important;
   margin: auto !important;
 }
-header .account_navigation.main_navigation > li{
+header .account_navigation.main_navigation > li {
   position: relative;
 }
-header .account_navigation.main_navigation ul.sub_menu_dropdown  li{
+header .account_navigation.main_navigation ul.sub_menu_dropdown li {
   margin-bottom: 20px;
 }
-header .account_navigation.main_navigation ul.sub_menu_dropdown  li a{
+header .account_navigation.main_navigation ul.sub_menu_dropdown li a {
   display: block;
   width: max-content;
   font-size: 1.5rem;
@@ -568,7 +806,7 @@ header .account_navigation.main_navigation ul.sub_menu_dropdown  li a{
   font-weight: 400;
   text-decoration: none;
 }
-header .account_navigation.main_navigation ul.sub_menu_dropdown  {
+header .account_navigation.main_navigation ul.sub_menu_dropdown {
   position: absolute;
   top: calc(100% + 25px);
   right: 0%;
@@ -577,13 +815,107 @@ header .account_navigation.main_navigation ul.sub_menu_dropdown  {
   width: max-content;
   padding: 20px 25px;
   border-radius: 5px;
-  transition: .4s all ease-in-out;
+  transition: 0.4s all ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
 
-header .account_navigation.main_navigation > li:hover  ul.sub_menu_dropdown{
+header .account_navigation.main_navigation > li:hover ul.sub_menu_dropdown {
   opacity: 1;
-    visibility: visible;
-    top: calc(100% + 10px);
+  visibility: visible;
+  top: calc(100% + 10px);
+}
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  .woocommerce-billing-fields__field-wrapper
+  p.form-row
+  label
+  abbr {
+  font-size: inherit;
+}
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  .woocommerce-billing-fields__field-wrapper
+  p.form-row
+  label,
+.woocommerce-additional-fields__field-wrapper label {
+  font-size: 1.5rem;
+}
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  .woocommerce-billing-fields__field-wrapper {
+  padding: 10px;
+}
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  p.form-row
+  input.input-text,
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  p.form-row
+  select,
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  p.form-row
+  select
+  option,
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered,
+.woocommerce-additional-fields__field-wrapper textarea {
+  font-size: 1.4rem;
+  padding: 5px;
+}
+.checkout.woocommerce-checkout
+  #customer_details
+  .woocommerce-billing-fields
+  > h3,
+.woocommerce-additional-fields > h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.select2-container .select2-selection--single {
+  height: unset;
+}
+#customer_details {
+  margin-bottom: 50px;
+  background-color: #fff;
+  padding: 15px 14px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px #c1c1c1;
+}
+.woocommerce table.shop_table {
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px #c1c1c1;
+}
+.woocommerce table.shop_table th {
+  font-size: 1.5rem;
+}
+.woocommerce table.shop_table td,
+.woocommerce table.shop_table td span,
+.woocommerce table.shop_table td span bdi {
+  font-size: 1.3rem;
+}
+.woocommerce-checkout
+  #payment
+  ul.payment_methods
+  li
+  label[for="payment_method_stripe"],
+.woocommerce form .form-row label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.wc-stripe-elements-field {
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 5px;
 }

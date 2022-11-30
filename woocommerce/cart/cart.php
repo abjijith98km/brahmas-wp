@@ -18,11 +18,15 @@
 
 defined('ABSPATH') || exit;
 
-do_action('woocommerce_before_cart'); ?>
+// do_action('woocommerce_before_cart');
+ ?>
 
 <section class="cart_page_block">
 
   <div class="container">
+    <?php
+    do_action('woocommerce_before_cart');
+    ?>
     <div class="cart_upper_wrp">
       <div class="row">
         <div class="col-12 col-lg-8">
