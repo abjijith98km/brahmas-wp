@@ -632,7 +632,12 @@ form[method="post"] .woocommerce-address-fields .form-row select {
   /* font-weight: 700; */
 }
 .woocommerce-message,
-.woocommerce-info {
+.woocommerce-info , .woocommerce-error li{
+  font-size: 1.6rem;
+}
+.woocommerce-error::before{
+  top: 1rem;
+  left: 1rem;
   font-size: 1.6rem;
 }
 .woocommerce-info a {
@@ -686,6 +691,7 @@ form[method="post"] {
   font-size: 1.4rem;
   margin-top: 5px;
   padding: 5px 10px;
+  border-radius: 5px;
 }
 section.related.products {
   padding: 40px 0;
@@ -716,6 +722,7 @@ form[method="post"] .woocommerce-address-fields button.button.wp-element-button,
   color: #fff;
   margin-top: 25px;
   font-size: 1.7rem;
+  border-radius: 5px;
 }
 section.professional_courses_bock {
   min-height: 70vh;
@@ -759,10 +766,18 @@ section.professional_courses_bock {
 .woocommerce .cart .button:hover,
 .woocommerce .cart input.button,
 .woocommerce .cart input.button:hover,
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button , .woocommerce #payment #place_order, .woocommerce-page #payment #place_order{
   background-color: #ea4a34 !important;
   color: #fff !important;
   font-size: 1.2rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.woocommerce .woocommerce-error .button{
+  background-color: #ea4a34 !important;
+  color: #fff !important;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 .woocommerce-form__label.woocommerce-form__label-for-checkbox.woocommerce-form-login__rememberme {
   display: block;
@@ -918,4 +933,11 @@ header .account_navigation.main_navigation > li:hover ul.sub_menu_dropdown {
   font-size: 1.5rem;
   font-weight: 400;
   padding: 5px;
+}
+header .addressbar_wrap .working_time , header .addressbar_wrap nav .contact_info_details{
+  font-size: 1.3rem;
+}
+.woocommerce-page table.cart td.actions input.input-text{
+  width: 120px;
+  font-size: 1.4rem;
 }
