@@ -211,6 +211,7 @@
                 if (is_user_logged_in()) :
                 ?>
                   <ul class="sub_menu_dropdown">
+                    <li><a href="http://localhost/brahmasv1/my-account">My Account</a></li>
                     <li><a href="http://localhost/brahmasv1/my-account/orders">My courses</a></li>
                     <li><a href="http://localhost/brahmasv1/my-account/edit-address">Addresses</a></li>
                     <li><a href="http://localhost/brahmasv1/my-account/edit-account">Edit account</a></li>
